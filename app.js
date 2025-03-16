@@ -48,12 +48,14 @@ function agregarAmigo() {
 }
 
 function sortearAmigo() {
+	nombre_aleatorio = document.getElementById("resultado");
+
 	tamArr = arrLista.length;
 
 	if (tamArr) {
 		numRan = Math.floor(Math.random() * tamArr);
 
-		console.log("num random", arrLista[numRan]);
+		nombre_aleatorio.innerHTML = `${arrLista[numRan]}`;
 	} else {
 		alert("no hay amigos");
 	}
